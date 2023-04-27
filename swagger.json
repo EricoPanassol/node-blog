@@ -1,0 +1,54 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My first API",
+        "description": "This is a simple API for testing",
+        "termsOfService": "http://localhost:3000/terms",
+        "contact": {
+            "url": "http://localhost:3000/contact-me"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "API test"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "description": "This route returns the home page",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/about": {
+            "get": {
+                "description": "This route returns the about page",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
