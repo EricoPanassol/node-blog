@@ -4,13 +4,16 @@ const Repository = require('../Repository/Repository');
 
 const repo = new Repository();
 
-router.get('/single-blog', async (req, res) => {
-    try {
-        const singleBlog = await repo.getBlogById('644bd343a467446a2ccb8bf2');
-        res.send(singleBlog);
-    } catch (err) {
-        res.status(500).send('Error retrieving blog');
-    }
+router.get('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    repo.getBlogById(id)
+        .then((result) => {
+            console.log("OFSAIJFIOASFJAS")
+            res.render('details', { blog: result, title: 'Blog Details' });
+        })
+        .catch((err) => {
+            res.status(404).render('404', { title: 'Blog not found' });
+        })
 });
 
 module.exports = router;

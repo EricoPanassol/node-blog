@@ -9,6 +9,7 @@ router.get('/blogs/create', (req, res) => {
     res.render('create-blog', { title: 'Create a new blog' });
 });
 
+
 router.post('/blogs', (req, res) => {
     try {
         repo.postBlog(req.body);
@@ -18,16 +19,6 @@ router.post('/blogs', (req, res) => {
     res.redirect('/blogs');
 });
 
-router.get('/blogs/:id', (req, res) => {
-    const id = req.params.id;
-    repo.getBlogById(id)
-        .then((result) => {
-            console.log("OFSAIJFIOASFJAS")
-            res.render('details', { blog: result, title: 'Blog Details' });
-        })
-        .catch((err) => {
-            res.status(404).render('404', { title: 'Blog not found' });
-        })
-});
+
 
 module.exports = router;
