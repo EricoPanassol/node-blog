@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
         { title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur' },
         { title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur' },
     ];
-    res.render('index', { title: 'Home', blogs: blogs });
+    res.redirect('/blogs');
+    // res.render('index', { title: 'Home', blogs: blogs });
 })
 
 module.exports = router;
