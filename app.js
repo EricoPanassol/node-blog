@@ -7,10 +7,9 @@ const indexRoute = require('./routes/indexRoute');
 const aboutRoute = require('./routes/aboutRoute');
 const newBlogRoute = require('./routes/newBlogRoute');
 const notFoundRoute = require('./routes/notFoundRoute');
-const addBlogRoute = require('./routes/addBlogRoute');
 const getAllBlogsRoute = require('./routes/getAllBlogsRoute');
 const singleBlogRoute = require('./routes/singleBlogRoute');
-const delteBlogRoute = require('./routes/deleteBlogRoute');
+const deleteBlogRoute = require('./routes/deleteBlogRoute');
 
 const swaggerJson = './swagger.json';
 const swaggerDocument = JSON.parse(fs.readFileSync(swaggerJson, 'utf8'));
@@ -34,9 +33,9 @@ app.use(logger('dev'));
 app.use(indexRoute);
 app.use(aboutRoute);
 app.use(newBlogRoute);
-app.use(addBlogRoute);
 app.use(getAllBlogsRoute);
 app.use(singleBlogRoute);
-app.use(delteBlogRoute);
+// app.use(deleteBlogRoute);
 app.use(notFoundRoute);
+
 

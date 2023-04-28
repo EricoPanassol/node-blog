@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 
 const dbConnection = require('./db/connection');
@@ -13,35 +12,35 @@ class Repository {
     async postBlog(blogData) {
         const blog = new Blog(blogData);
         try {
-            const result = await blog.save();
+            const result = blog.save();
             return result;
         } catch (err) { }
     }
 
     async getAllBlogs() {
         try {
-            const result = Blog.find();
+            const result = await Blog.find();
             return result;
         } catch (err) { }
     }
 
     async getBlogById(blogId) {
         try {
-            const result = Blog.findById(blogId);
+            const result = await Blog.findById(blogId);
             return result;
         } catch (err) { }
     }
 
     async deleteBlogById(blogId) {
         try {
-            const result = Blog.findByIdAndDelete(blogId);
+            const result = await Blog.findByIdAndDelete(blogId);
             return result;
         } catch (err) { }
     }
 
     async deleteAllBlogs() {
         try {
-            const result = Blog.deleteMany();
+            const result = await Blog.deleteMany();
             return result;
         } catch (err) { }
     }
