@@ -13,6 +13,10 @@
         {
             "url": "http://localhost:3000",
             "description": "API test"
+        },
+        {
+            "url": "http://localhost:3001",
+            "description": "Core"
         }
     ],
     "paths": {

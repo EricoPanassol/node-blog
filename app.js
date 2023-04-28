@@ -1,7 +1,7 @@
 const express = require('express') // api building
-const logger = require('morgan'); // 3d=-party middleware (logger)
+const logger = require('morgan'); // 3d-party middleware (logger)
 const fs = require('fs'); // file system functions
-const swaggerUi = require('swagger-ui-express'); // swagget documentation
+const swaggerUi = require('swagger-ui-express'); // swagger documentation
 
 const indexRoute = require('./routes/indexRoute');
 const aboutRoute = require('./routes/aboutRoute');
