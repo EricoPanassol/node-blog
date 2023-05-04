@@ -4,9 +4,10 @@ const Repository = require('../Repository/Repository');
 
 const repo = new Repository();
 
-router.get('/delete-blog', async (req, res) => {
+router.delete('/blogs/:id', async (req, res) => {
+    const id = req.params.id;
     try {
-        const deleteBlog = await repo.deleteBlogById('644bda04ff3a7f957c2d8c60');
+        const deleteBlog = repo.deleteBlogById(id);
         res.send(deleteBlog);
     } catch (err) {
         res.status(500).send('Error deleting blog');

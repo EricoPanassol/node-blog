@@ -35,7 +35,7 @@ app.use(aboutRoute);
 app.use(newBlogRoute);
 app.use(getAllBlogsRoute);
 app.use(singleBlogRoute);
-// app.use(deleteBlogRoute);
+app.use(deleteBlogRoute);
 app.use(notFoundRoute);
 
 

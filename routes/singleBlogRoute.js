@@ -8,7 +8,6 @@ router.get('/blogs/:id', (req, res) => {
     const id = req.params.id;
     repo.getBlogById(id)
         .then((result) => {
-            console.log("OFSAIJFIOASFJAS")
             res.render('details', { blog: result, title: 'Blog Details' });
         })
         .catch((err) => {

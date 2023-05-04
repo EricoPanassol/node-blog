@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "blog ",
+  "steps": [
+    {
+      "file": "routes/getAllBlogsRoute.js",
+      "description": "create the repository obj",
+      "line": 5
+    }
+  ]
+}
